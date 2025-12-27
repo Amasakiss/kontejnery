@@ -34,10 +34,42 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+    
+          // Smoothly move the map to the new location
+          map.panTo([lat, lon]);
+    
+          // Add/update the user marker
+          if (!window.userMarker) {
+            window.userMarker = L.marker([lat, lon]).addTo(map)
+              .bindPopup('You are here!')
+              .openPopup();
+          } else {
+            window.userMarker.setLatLng([lat, lon]);
+          }
+        },
+        (error) => {
+          console.error('Geolocation error:', error);
+        },
+        {
+          enableHighAccuracy: true, // improves location accuracy
+          maximumAge: 1000,         // use a cached position only if <1s old
+          timeout: 5000              // 5 seconds timeout
+        }
+      );
+    } else {
+      console.log('Geolocation not supported');
+    }
 
+    <!--
     L.marker([51.505, -0.09])
       .addTo(map)
       .bindPopup('Example POI');
+    -->
   </script>
 </body>
 </html>
