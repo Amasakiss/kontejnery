@@ -47,7 +47,7 @@
       popupAnchor: [0, -15]
     });
     const map = L.map('map', {
-      maxZoom: 20,    // maximum zoom allowed
+      maxZoom: 19,    // maximum zoom allowed
       minZoom: 1      // optional: minimum zoom
     }).setView([49.8348, 18.2819], 13);
     const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -59,11 +59,15 @@
     followBtn.addEventListener('click', () => {
       follow = !follow;
       followBtn.textContent = `Follow: ${follow ? 'ON' : 'OFF'}`;
+      if (follow && window.userMarker) {
+        const latlng = window.userMarker.getLatLng();
+        map.panTo(latlng);
+      }
     });
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors',
-      maxZoom: 20
+      maxZoom: 19
     }).addTo(map);
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition(
@@ -79,8 +83,6 @@
           // Add/update the user marker
           if (!window.userMarker) {
             window.userMarker = L.marker([lat, lon], { icon: userIcon }).addTo(map)
-              .bindPopup('You are here!')
-              .openPopup();
           } else {
             window.userMarker.setLatLng([lat, lon]);
           }
@@ -98,11 +100,6 @@
       console.log('Geolocation not supported');
     }
 
-    <!--
-    L.marker([51.505, -0.09])
-      .addTo(map)
-      .bindPopup('Example POI');
-    -->
   </script>
 </body>
 </html>
