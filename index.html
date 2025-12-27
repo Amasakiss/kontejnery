@@ -40,6 +40,12 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
+    const userIcon = L.icon({
+      iconUrl: 'Google_Map_Marker.svg',
+      iconSize: [30, 30],
+      iconAnchor: [15, 15],
+      popupAnchor: [0, -15]
+    });
     const map = L.map('map', {
       maxZoom: 22,    // maximum zoom allowed
       minZoom: 1      // optional: minimum zoom
@@ -72,7 +78,7 @@
               
           // Add/update the user marker
           if (!window.userMarker) {
-            window.userMarker = L.marker([lat, lon]).addTo(map)
+            window.userMarker = L.marker([lat, lon], { icon: userIcon }).addTo(map)
               .bindPopup('You are here!')
               .openPopup();
           } else {
