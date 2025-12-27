@@ -47,7 +47,7 @@
       popupAnchor: [0, -15]
     });
     const map = L.map('map', {
-      maxZoom: 22,    // maximum zoom allowed
+      maxZoom: 20,    // maximum zoom allowed
       minZoom: 1      // optional: minimum zoom
     }).setView([49.8348, 18.2819], 13);
     const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -63,7 +63,7 @@
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors',
-      maxZoom: 22
+      maxZoom: 20
     }).addTo(map);
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition(
