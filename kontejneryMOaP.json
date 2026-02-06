@@ -248,8 +248,8 @@
     "DateStart": "2026-02-11T07:00:00",
     "DateEnd": "2026-02-12T07:00:00",
     "Street": "N\u00E1m. Sv. \u010Cecha 4",
-    "Longitude": null,
-    "Latitude": null
+    "Longitude": "18.2723218",
+    "Latitude": "49.8508631"
   },
   {
     "DateStart": "2026-02-12T07:00:00",
@@ -514,8 +514,8 @@
     "DateStart": "2026-02-18T07:00:00",
     "DateEnd": "2026-02-19T07:00:00",
     "Street": "Msgr. \u0160r\u00E1mka",
-    "Longitude": null,
-    "Latitude": null
+    "Longitude": "18.2892768",
+    "Latitude": "49.8352156"
   },
   {
     "DateStart": "2026-02-18T07:00:00",
@@ -671,4 +671,5 @@
     "Longitude": 18.2823526,
     "Latitude": 49.8455263
   }
+
 ]
