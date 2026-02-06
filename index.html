@@ -35,6 +35,15 @@
   border: 1px solid #888;
   cursor: pointer;
   ">Follow: OFF</button>
+
+  <input id="datePicker" type="datetime-local" style="
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1000;
+  padding: 8px;
+  font-size: 14px;
+  ">
   
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -55,15 +64,9 @@
     let follow = false; // controls whether the map pans to user location
     const followBtn = document.getElementById('followBtn');
     
-    // Button click toggles follow
-    followBtn.addEventListener('click', () => {
-      follow = !follow;
-      followBtn.textContent = `Follow: ${follow ? 'ON' : 'OFF'}`;
-      if (follow && window.userMarker) {
-        const latlng = window.userMarker.getLatLng();
-        map.panTo(latlng);
-      }
-    });
+    let kontejnery = [];
+    let kontejneryMarkers = [];
+    const datePicker = document.getElementById("datePicker");
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors',
@@ -99,6 +102,65 @@
     } else {
       console.log('Geolocation not supported');
     }
+
+    // Set picker to current datetime
+    function setNow() {
+      const now = new Date();
+      now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+      datePicker.value = now.toISOString().slice(0,16);
+    }
+  
+    setNow();
+    
+    // Button click toggles follow
+    followBtn.addEventListener('click', () => {
+      follow = !follow;
+      followBtn.textContent = `Follow: ${follow ? 'ON' : 'OFF'}`;
+      if (follow && window.userMarker) {
+        const latlng = window.userMarker.getLatLng();
+        map.panTo(latlng);
+      }
+    });
+
+    // Load JSON
+    fetch("kontejneryMOaP.json")
+      .then(r => r.json())
+      .then(data => {
+        kontejnery = data;
+        updateKontejneryMarkers();
+      });
+    
+    function clearMarkers() {
+      kontejneryMarkers.forEach(m => map.removeLayer(m));
+      kontejneryMarkers = [];
+    }
+    
+    function updateKontejneryMarkers() {
+      clearMarkers();
+    
+      const selectedDate = new Date(datePicker.value);
+    
+      kontejnery.forEach(k => {
+        if (k.Latitude == null || k.Longitude == null) return;
+    
+        const start = new Date(k.DateStart);
+        const end = new Date(k.DateEnd);
+    
+        if (selectedDate >= start && selectedDate <= end) {
+          const marker = L.marker([k.Latitude, k.Longitude])
+            .bindPopup(`
+              <b>${k.Street}</b><br>
+              From: ${start.toLocaleString()}<br>
+              To: ${end.toLocaleString()}
+            `)
+            .addTo(map);
+    
+          kontejneryMarkers.push(marker);
+        }
+      });
+    }
+    
+    datePicker.addEventListener("change", updateKontejneryMarkers);
 
   </script>
 </body>
