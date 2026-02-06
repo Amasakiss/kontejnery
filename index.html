@@ -27,9 +27,6 @@
       color: white;
       border-radius: 50%;
     }
-    .flatpickr-calendar {
-      font-size: 16px;   /* bigger touch targets */
-    }
   </style>
 </head>
 
@@ -47,14 +44,16 @@
     cursor: pointer;
   ">Follow: OFF</button>
 
-  <input id="datePicker" type="text" style="
+  <input id="datePicker" style="
     position: absolute;
     top: 60px;
     right: 10px;
     z-index: 1000;
     padding: 8px;
     font-size: 14px;
-    width: 80px;" placeholder="Select date">
+    width: 85px;
+
+  ">
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -164,9 +163,6 @@
       flatpickr(datePickerInput, {
         defaultDate: "today",
         onChange: updateKontejneryMarkers,
-        clickOpens: true,          // important for mobile
-        allowInput: true,          // allows manual typing
-        enableTime: false,         // optional: set true if you want time
         onDayCreate: function(dObj, dStr, fp, dayElem) {
           const dateStr = dayElem.dateObj.toISOString().slice(0,10);
           if (activeDates.includes(dateStr)) dayElem.classList.add("hasKontejner");
