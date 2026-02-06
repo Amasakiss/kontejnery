@@ -55,6 +55,12 @@
       iconAnchor: [15, 15],
       popupAnchor: [0, -15]
     });
+    const kontejnerIcon = L.icon({
+      iconUrl: 'kontejner.svg',
+      iconSize: [30, 30],
+      iconAnchor: [15, 15],
+      popupAnchor: [0, -15]
+    });
     const map = L.map('map', {
       maxZoom: 19,    // maximum zoom allowed
       minZoom: 1      // optional: minimum zoom
@@ -147,7 +153,7 @@
         const end = new Date(k.DateEnd);
     
         if (selectedDate >= start && selectedDate <= end) {
-          const marker = L.marker([k.Latitude, k.Longitude])
+          const marker = L.marker([k.Latitude, k.Longitude], { icon: kontejnerIcon })
             .bindPopup(`
               <b>${k.Street}</b><br>
               From: ${start.toLocaleString()}<br>
