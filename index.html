@@ -9,6 +9,8 @@
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <style>
     html, body {
@@ -19,34 +21,43 @@
       height: 100vh;
       width: 100%;
     }
+    /* Highlighted days */
+    .flatpickr-day.hasKontejner {
+      background: #4caf50;
+      color: white;
+      border-radius: 50%;
+    }
   </style>
 </head>
 
 <body>
   <div id="map"></div>
   <button id="followBtn" style="
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
-  padding: 12px 18px; 
-  font-size: 16px; 
-  background: white;
-  border: 1px solid #888;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    padding: 12px 18px; 
+    font-size: 16px; 
+    background: white;
+    border: 1px solid #888;
+    cursor: pointer;
   ">Follow: OFF</button>
 
-  <input id="datePicker" type="datetime-local" style="
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  z-index: 1000;
-  padding: 8px;
-  font-size: 14px;
+  <input id="datePicker" style="
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1000;
+    padding: 8px;
+    font-size: 14px;
+    width: 170px;
   ">
-  
+
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <script>
     const userIcon = L.icon({
@@ -61,113 +72,102 @@
       iconAnchor: [15, 15],
       popupAnchor: [0, -15]
     });
-    const map = L.map('map', {
-      maxZoom: 19,    // maximum zoom allowed
-      minZoom: 1      // optional: minimum zoom
-    }).setView([49.8348, 18.2819], 13);
+
+    const map = L.map('map', { maxZoom: 19, minZoom: 1 }).setView([49.8348, 18.2819], 13);
     const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    
-    let follow = false; // controls whether the map pans to user location
+
+    let follow = false;
     const followBtn = document.getElementById('followBtn');
-    
+
     let kontejnery = [];
     let kontejneryMarkers = [];
-    const datePicker = document.getElementById("datePicker");
-    
+    let activeDates = [];
+    const datePickerInput = document.getElementById("datePicker");
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors',
       maxZoom: 19
     }).addTo(map);
+
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition(
         (position) => {
           const lat = position.coords.latitude;
           const lon = position.coords.longitude;
-    
-          // Smoothly move the map to the new location
-          if (follow) {
-            map.panTo([lat, lon]);
-          }
-              
-          // Add/update the user marker
+
+          if (follow && window.userMarker) map.panTo([lat, lon]);
+
           if (!window.userMarker) {
             window.userMarker = L.marker([lat, lon], { icon: userIcon }).addTo(map)
           } else {
             window.userMarker.setLatLng([lat, lon]);
           }
         },
-        (error) => {
-          console.error('Geolocation error:', error);
-        },
-        {
-          enableHighAccuracy: isMobile, // improves location accuracy if on mobile
-          maximumAge: 1000,         // use a cached position only if <1s old
-          timeout: 5000              // 5 seconds timeout
-        }
+        (error) => console.error('Geolocation error:', error),
+        { enableHighAccuracy: isMobile, maximumAge: 1000, timeout: 5000 }
       );
     } else {
       console.log('Geolocation not supported');
     }
 
-    // Set picker to current datetime
-    function setNow() {
-      const now = new Date();
-      now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-      datePicker.value = now.toISOString().slice(0,16);
-    }
-  
-    setNow();
-    
-    // Button click toggles follow
     followBtn.addEventListener('click', () => {
       follow = !follow;
       followBtn.textContent = `Follow: ${follow ? 'ON' : 'OFF'}`;
-      if (follow && window.userMarker) {
-        const latlng = window.userMarker.getLatLng();
-        map.panTo(latlng);
-      }
+      if (follow && window.userMarker) map.panTo(window.userMarker.getLatLng());
     });
 
-    // Load JSON
+    // Load JSON and initialize
     fetch("kontejneryMOaP.json")
       .then(r => r.json())
       .then(data => {
         kontejnery = data;
+        // Extract active start dates
+        activeDates = kontejnery.map(k => k.DateStart.slice(0,10));
+        initDatePicker();
         updateKontejneryMarkers();
       });
-    
+
     function clearMarkers() {
       kontejneryMarkers.forEach(m => map.removeLayer(m));
       kontejneryMarkers = [];
     }
-    
+
+    function getSelectedDate() {
+      const selected = datePickerInput._flatpickr.selectedDates[0];
+      return selected || new Date();
+    }
+
     function updateKontejneryMarkers() {
       clearMarkers();
-    
-      const selectedDate = new Date(datePicker.value);
-    
+      const selectedDate = getSelectedDate();
+
       kontejnery.forEach(k => {
         if (k.Latitude == null || k.Longitude == null) return;
-    
+
         const start = new Date(k.DateStart);
         const end = new Date(k.DateEnd);
-    
+
         if (selectedDate >= start && selectedDate <= end) {
           const marker = L.marker([k.Latitude, k.Longitude])
-            .bindPopup(`
-              <b>${k.Street}</b><br>
-              From: ${start.toLocaleString()}<br>
-              To: ${end.toLocaleString()}
-            `)
+            .bindPopup(`<b>${k.Street}</b><br>From: ${start.toLocaleString()}<br>To: ${end.toLocaleString()}`)
             .addTo(map);
-    
+
           kontejneryMarkers.push(marker);
         }
       });
     }
-    
-    datePicker.addEventListener("change", updateKontejneryMarkers);
 
+    // Initialize Flatpickr with highlighted days
+    function initDatePicker() {
+      flatpickr(datePickerInput, {
+        defaultDate: "today",
+        onChange: updateKontejneryMarkers,
+        onDayCreate: function(dObj, dStr, fp, dayElem) {
+          const dateStr = dayElem.dateObj.toISOString().slice(0,10);
+          if (activeDates.includes(dateStr)) dayElem.classList.add("hasKontejner");
+        }
+      });
+    }
   </script>
 </body>
 </html>
