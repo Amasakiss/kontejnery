@@ -1,9 +1,674 @@
 [
   {
-    "DateStart": "2026-02-06T00:00:00",
-    "DateEnd": "2026-02-07T00:00:00",
-    "Street": "Some street",
-    "Longitude": 18.28,
-    "Latitude": 49.83
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Ahepjukova 3",
+    "Longitude": 18.26195,
+    "Latitude": 49.8395163
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Ahepjukova 6",
+    "Longitude": 18.263755,
+    "Latitude": 49.8380613
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Cingrova 7",
+    "Longitude": 18.2801041,
+    "Latitude": 49.8331675
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Gen. P\u00EDky 1A",
+    "Longitude": 18.2710087,
+    "Latitude": 49.8395963
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Hornopoln\u00ED 51",
+    "Longitude": 18.2624075,
+    "Latitude": 49.84108
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Janovsk\u00E9ho 43",
+    "Longitude": 18.2750229,
+    "Latitude": 49.8318107
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Varensk\u00E1 6",
+    "Longitude": 18.2739275,
+    "Latitude": 49.8360825
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Varensk\u00E1 36",
+    "Longitude": 18.2710013,
+    "Latitude": 49.8352101
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Senov\u00E1\u017En\u00E1 1",
+    "Longitude": 18.2800198,
+    "Latitude": 49.8325732
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "28. \u0159\u00EDjna 153",
+    "Longitude": 18.2645827,
+    "Latitude": 49.8288811
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Dr. Mal\u00E9ho 25",
+    "Longitude": 18.2730988,
+    "Latitude": 49.8261726
+  },
+  {
+    "DateStart": "2026-02-09T07:00:00",
+    "DateEnd": "2026-02-10T07:00:00",
+    "Street": "Foerstrova 20",
+    "Longitude": 18.2671275,
+    "Latitude": 49.8284163
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Gajdo\u0161ova 8",
+    "Longitude": 18.2765363,
+    "Latitude": 49.8261788
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Gajdo\u0161ova 39",
+    "Longitude": 18.2718738,
+    "Latitude": 49.8239525
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Gajdo\u0161ova 48",
+    "Longitude": 18.26896,
+    "Latitude": 49.8237138
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Nedbalova 20",
+    "Longitude": 18.2681199,
+    "Latitude": 49.8278738
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Petra K\u0159i\u010Dky 18",
+    "Longitude": 18.2760058,
+    "Latitude": 49.8294011
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Petra K\u0159i\u010Dky 19",
+    "Longitude": 18.2752963,
+    "Latitude": 49.8280763
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Uheln\u00E1 22",
+    "Longitude": 18.2752578,
+    "Latitude": 49.8248037
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "V\u00FDstavn\u00ED 23",
+    "Longitude": 18.2661289,
+    "Latitude": 49.8256325
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Zelen\u00E1 26",
+    "Longitude": 18.2749597,
+    "Latitude": 49.82947
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Arbesova 13",
+    "Longitude": 18.2738733,
+    "Latitude": 49.8532234
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Bo\u017Ekova 81",
+    "Longitude": 18.2614742,
+    "Latitude": 49.8527588
+  },
+  {
+    "DateStart": "2026-02-10T07:00:00",
+    "DateEnd": "2026-02-11T07:00:00",
+    "Street": "Dobrovsk\u00E9ho 4",
+    "Longitude": 18.2675206,
+    "Latitude": 49.858426
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "F\u00FCgnerova 20",
+    "Longitude": 18.2777025,
+    "Latitude": 49.8545
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Gebauerova 11",
+    "Longitude": 18.2799266,
+    "Latitude": 49.8530755
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "H\u00E1jkova 8",
+    "Longitude": 18.2780647,
+    "Latitude": 49.8540221
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Hlu\u010D\u00EDnsk\u00E1 64",
+    "Longitude": 18.2677309,
+    "Latitude": 49.8589217
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Jungmannova 6",
+    "Longitude": 18.2726142,
+    "Latitude": 49.8526682
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Korejsk\u00E1 22",
+    "Longitude": 18.2810082,
+    "Latitude": 49.8525605
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Kosmova 18",
+    "Longitude": 18.2768301,
+    "Latitude": 49.8547403
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Libu\u0161ina 5",
+    "Longitude": 18.2743989,
+    "Latitude": 49.8506847
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Muglinovsk\u00E1 33",
+    "Longitude": 18.2817715,
+    "Latitude": 49.8526637
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Na Li\u0161kovci 2",
+    "Longitude": 18.2755827,
+    "Latitude": 49.8520661
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "Na N\u00E1honu 14",
+    "Longitude": 18.2708994,
+    "Latitude": 49.859203
+  },
+  {
+    "DateStart": "2026-02-11T07:00:00",
+    "DateEnd": "2026-02-12T07:00:00",
+    "Street": "N\u00E1m. Sv. \u010Cecha 4",
+    "Longitude": null,
+    "Latitude": null
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "Newtonova 14",
+    "Longitude": 18.2780448,
+    "Latitude": 49.8532784
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "Orebitsk\u00E1 27",
+    "Longitude": 18.2802199,
+    "Latitude": 49.8537289
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "Palack\u00E9ho 50",
+    "Longitude": 18.2644293,
+    "Latitude": 49.8553783
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "Rovn\u00E1 22",
+    "Longitude": 18.2691662,
+    "Latitude": 49.8568837
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "\u0160p\u00E1lova 31",
+    "Longitude": 18.2763296,
+    "Latitude": 49.8523869
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "\u00DAprkova 26",
+    "Longitude": 18.2694512,
+    "Latitude": 49.8580201
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "Na Ml\u00FDnici 11",
+    "Longitude": 18.2676932,
+    "Latitude": 49.8579532
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "J\u00EDlov\u00E1 10",
+    "Longitude": 18.2696111,
+    "Latitude": 49.8467788
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "J\u00EDlov\u00E1 17",
+    "Longitude": 18.2684213,
+    "Latitude": 49.8459538
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "Jirsk\u00E1 11",
+    "Longitude": 18.27336,
+    "Latitude": 49.8473426
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "M\u00E1nesova 10",
+    "Longitude": 18.2762216,
+    "Latitude": 49.8483032
+  },
+  {
+    "DateStart": "2026-02-12T07:00:00",
+    "DateEnd": "2026-02-13T07:00:00",
+    "Street": "M\u00E1nesova 18",
+    "Longitude": 18.2747127,
+    "Latitude": 49.8479924
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "Denisova 3",
+    "Longitude": 18.2863176,
+    "Latitude": 49.8331125
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "M\u00E1nesova 2",
+    "Longitude": 18.2763507,
+    "Latitude": 49.8488446
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "M\u00E1nesova 10",
+    "Longitude": 18.2762216,
+    "Latitude": 49.8483032
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "M\u00E1nesova 21",
+    "Longitude": 18.2747609,
+    "Latitude": 49.8472878
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "N\u00E1dra\u017En\u00ED 137",
+    "Longitude": 18.2786638,
+    "Latitude": 49.8480224
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "Va\u0161kov\u00E1 19",
+    "Longitude": 18.2682408,
+    "Latitude": 49.8466808
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "E. F. Buriana",
+    "Longitude": 18.2858406,
+    "Latitude": 49.8486859
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "Na B\u011Blidle 8",
+    "Longitude": 18.2877309,
+    "Latitude": 49.8498316
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "Pelclova 4",
+    "Longitude": 18.28601,
+    "Latitude": 49.8479213
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "U Parku 8",
+    "Longitude": 18.2857451,
+    "Latitude": 49.8502235
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "V\u00EDt\u011Bzn\u00E1 2",
+    "Longitude": 18.2861735,
+    "Latitude": 49.8469942
+  },
+  {
+    "DateStart": "2026-02-16T07:00:00",
+    "DateEnd": "2026-02-17T07:00:00",
+    "Street": "V\u00EDt\u011Bzn\u00E1 17",
+    "Longitude": 18.2881877,
+    "Latitude": 49.8487511
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Dvo\u0159\u00E1kova 20",
+    "Longitude": 18.2914286,
+    "Latitude": 49.8379764
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Husova 9",
+    "Longitude": 18.2864943,
+    "Latitude": 49.8401866
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Jan\u00E1\u010Dkova 16",
+    "Longitude": 18.282672,
+    "Latitude": 49.8366963
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Jure\u010Dkova 14",
+    "Longitude": 18.2870705,
+    "Latitude": 49.8346128
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Mil\u00ED\u010Dova 16",
+    "Longitude": 18.2878257,
+    "Latitude": 49.8382362
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "St\u0159elni\u010Dn\u00ED 12",
+    "Longitude": 18.294598,
+    "Latitude": 49.8347852
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Zahradn\u00ED 7",
+    "Longitude": 18.2882042,
+    "Latitude": 49.8371177
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Zeyerova 1",
+    "Longitude": 18.2938093,
+    "Latitude": 49.8360098
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "\u010Ceskobratrsk\u00E1 12",
+    "Longitude": 18.2901122,
+    "Latitude": 49.8400248
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Proke\u0161ovo n\u00E1m. 8",
+    "Longitude": 18.29138,
+    "Latitude": 49.8415937
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Veleslav\u00EDnova 6",
+    "Longitude": 18.2859574,
+    "Latitude": 49.8394673
+  },
+  {
+    "DateStart": "2026-02-17T07:00:00",
+    "DateEnd": "2026-02-18T07:00:00",
+    "Street": "Chel\u010Dick\u00E9ho 3",
+    "Longitude": 18.2857227,
+    "Latitude": 49.8379452
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Tyr\u0161ova 19",
+    "Longitude": 18.2870525,
+    "Latitude": 49.8361429
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Msgr. \u0160r\u00E1mka",
+    "Longitude": null,
+    "Latitude": null
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Bieblova 20",
+    "Longitude": 18.2795741,
+    "Latitude": 49.8409266
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Gork\u00E9ho 9",
+    "Longitude": 18.2810932,
+    "Latitude": 49.8418019
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Gork\u00E9ho 19",
+    "Longitude": 18.2795079,
+    "Latitude": 49.8415086
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "N\u00E1dra\u017En\u00ED 73",
+    "Longitude": 18.2827768,
+    "Latitude": 49.8402863
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Pod\u011Bbradova 60",
+    "Longitude": 18.281986,
+    "Latitude": 49.8401998
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Pod\u011Bbradova 63",
+    "Longitude": 18.2804114,
+    "Latitude": 49.8390064
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Tolst\u00E9ho 12",
+    "Longitude": 18.2800649,
+    "Latitude": 49.8424372
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Bachma\u010Dsk\u00E1 15",
+    "Longitude": 18.2847339,
+    "Latitude": 49.8453626
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Bachma\u010Dsk\u00E1 30",
+    "Longitude": 18.283498,
+    "Latitude": 49.844916
+  },
+  {
+    "DateStart": "2026-02-18T07:00:00",
+    "DateEnd": "2026-02-19T07:00:00",
+    "Street": "Gregorova 16",
+    "Longitude": 18.2874615,
+    "Latitude": 49.8428839
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Gregorova 4",
+    "Longitude": 18.2867361,
+    "Latitude": 49.8441799
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Jind\u0159ichova 14",
+    "Longitude": 18.2817759,
+    "Latitude": 49.8449883
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Josefa Lady 10",
+    "Longitude": 18.286224,
+    "Latitude": 49.8437152
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "K\u0159i\u017E\u00EDkova 16",
+    "Longitude": 18.2827711,
+    "Latitude": 49.8464828
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Na Des\u00E1t\u00E9m 25",
+    "Longitude": 18.286976,
+    "Latitude": 49.8413757
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Na Spojce 2",
+    "Longitude": 18.2813783,
+    "Latitude": 49.8443533
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "N\u00E1dra\u017En\u00ED 109",
+    "Longitude": 18.2805402,
+    "Latitude": 49.8440785
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Verdunsk\u00E1 17",
+    "Longitude": 18.2850629,
+    "Latitude": 49.8448359
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Zborovsk\u00E1 8",
+    "Longitude": 18.2829414,
+    "Latitude": 49.8434678
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "Zborovsk\u00E1 14",
+    "Longitude": 18.284022,
+    "Latitude": 49.8435692
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "\u017Den\u00ED\u0161kova 6",
+    "Longitude": 18.2866591,
+    "Latitude": 49.8434033
+  },
+  {
+    "DateStart": "2026-02-19T07:00:00",
+    "DateEnd": "2026-02-20T07:00:00",
+    "Street": "\u017Divi\u010Dn\u00E1 12",
+    "Longitude": 18.2823526,
+    "Latitude": 49.8455263
   }
 ]
