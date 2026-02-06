@@ -125,12 +125,7 @@
         kontejnery = data;
         // Extract active start dates
         activeDates = kontejnery.map(k => k.DateStart.slice(0,10));
-        if (isMobile) {
-          datePickerInput.type = "datetime-local";
-          datePickerInput.addEventListener("change", updateKontejneryMarkers);
-        } else {
-          initDatePicker(); // desktop Flatpickr with highlights
-        }
+        initDatePicker();
         updateKontejneryMarkers();
       });
 
