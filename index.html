@@ -163,9 +163,7 @@
     function initDatePicker() {
       flatpickr(datePickerInput, {
         defaultDate: "today",
-        onClose: function(selectedDates, dateStr, instance) {
-          updateKontejneryMarkers();
-        },
+        onChange: updateKontejneryMarkers,
         clickOpens: true,          // important for mobile
         allowInput: true,          // allows manual typing
         enableTime: false,         // optional: set true if you want time
