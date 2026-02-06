@@ -153,7 +153,7 @@
         const end = new Date(k.DateEnd);
     
         if (selectedDate >= start && selectedDate <= end) {
-          const marker = L.marker([k.Latitude, k.Longitude], { icon: kontejnerIcon })
+          const marker = L.marker([k.Latitude, k.Longitude])
             .bindPopup(`
               <b>${k.Street}</b><br>
               From: ${start.toLocaleString()}<br>
